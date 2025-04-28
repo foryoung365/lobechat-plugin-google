@@ -1,13 +1,13 @@
 {
   "author": "Barry",
   "homepage": "https://github.com/GithuBarry/chat-plugin-search-engine",
-  "identifier": "search-engine-serper",
+  "identifier": "search-engine-google-custom",
   "manifest": "https://raw.githubusercontent.com/GithuBarry/chat-plugin-search-engine/main/public/manifest.json",
   "meta": {
     "avatar": "🔍",
-    "description": "Google search engine via Serper.dev free API (2500x🆓/month)",
+    "description": "Google search engine via Google Custom Search API (100🆓/day)",
     "tags": ["web", "search"],
-    "title": "Search Google via Serper"
+    "title": "Search Google via Custom Search"
   },
   "schemaVersion": 1
 }

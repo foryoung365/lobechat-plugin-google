@@ -1,10 +1,17 @@
 {
   "components": {
     "securitySchemes": {
-      "apiAuth": {
+      "googleApiKey": {
         "type": "apiKey",
-        "name": "X-API-KEY",
-        "in": "header"
+        "name": "key",
+        "in": "query",
+        "description": "API key for Google Custom Search API"
+      },
+      "customSearchId": {
+        "type": "apiKey",
+        "name": "cx",
+        "in": "query",
+        "description": "The custom search engine ID to use for this request"
       }
     }
   },
@@ -14,9 +21,9 @@
   },
   "openapi": "3.0.0",
   "paths": {
-    "/search": {
-      "post": {
-        "summary": "Search Google and return top 10 results",
+    "/customsearch/v1": {
+      "get": {
+        "summary": "Search Google using Custom Search API",
         "operationId": "searchGoogle",
         "parameters": [
           {
@@ -30,12 +37,22 @@
           },
           {
             "in": "query",
+            "name": "num",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "required": false,
+            "description": "Number of search results to return (1-10)"
+          },
+          {
+            "in": "query",
             "name": "gl",
             "schema": {
               "type": "string"
             },
             "required": false,
-            "description": "Google Geo location parameter"
+            "description": "Geolocation of end user (country code)"
           },
           {
             "in": "query",
@@ -44,7 +61,7 @@
               "type": "string"
             },
             "required": false,
-            "description": "Google Geo locale parameter"
+            "description": "Interface language"
           }
         ],
         "responses": {
@@ -54,14 +71,26 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "required": [
-                    "result"
-                  ],
                   "properties": {
-                    "result": {
-                      "type": "string",
-                      "description": "Top 10 search results",
-                      "example": "\"title\": \"周末游推荐\",\n\"link\": \"https://www.example.com/destinations-for-weekends\",\n\"snippet\": \"周末去哪玩?周末旅游频道,精心推荐数百个周末游经典线路\",\n\"position\": 1"
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "description": "The title of the search result"
+                          },
+                          "link": {
+                            "type": "string",
+                            "description": "The URL of the search result"
+                          },
+                          "snippet": {
+                            "type": "string",
+                            "description": "A snippet of text from the search result"
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -71,7 +100,8 @@
         },
         "security": [
           {
-            "apiAuth": []
+            "googleApiKey": [],
+            "customSearchId": []
           }
         ]
       }
@@ -79,12 +109,13 @@
   },
   "security": [
     {
-      "apiAuth": []
+      "googleApiKey": [],
+      "customSearchId": []
     }
   ],
   "servers": [
     {
-      "url": "https://google.serper.dev"
+      "url": "https://www.googleapis.com"
     }
   ]
 }

@@ -1,18 +1,18 @@
 {
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/GithuBarry/chat-plugin-search-engine/main/public/openapi.json",
+    "url": "https://raw.githubusercontent.com/foryoung365/lobechat-plugin-google/main/public/openapi.json",
     "is_user_authenticated": false
   },
   "auth": {
     "type": "none"
   },
-  "contact_email": "33831597+GithuBarry@users.noreply.github.com",
-  "description_for_human": "Google search engine via Serper.dev free API (2500x🆓/month)",
-  "description_for_model": "Plugin for performing web searches using the Serper.dev API to access Google search results.",
-  "legal_info_url": "https://serper.dev/terms",
-  "logo_url": "https://serper.dev/favicon.ico",
-  "name_for_human": "Search Google via Serper",
-  "name_for_model": "search-engine-serper",
+  "contact_email": "1758359+foryoung365@users.noreply.github.com",
+  "description_for_human": "Google custom search engine API (100🆓/day)",
+  "description_for_model": "Plugin for performing web searches using the Google custom search engine API.",
+  "legal_info_url": "https://developers.google.com/custom-search/v1/introduction",
+  "logo_url": "https://www.google.com/favicon.ico",
+  "name_for_human": "Search Google via Google Custom Search",
+  "name_for_model": "search-engine-google-custom-search",
   "schema_version": "v1"
 }
