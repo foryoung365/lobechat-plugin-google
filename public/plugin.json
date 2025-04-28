@@ -1,8 +1,8 @@
 {
-  "author": "Barry",
-  "homepage": "https://github.com/GithuBarry/chat-plugin-search-engine",
+  "author": "foryoung365",
+  "homepage": "https://github.com/foryoung365/lobechat-plugin-google",
   "identifier": "search-engine-google-custom",
-  "manifest": "https://raw.githubusercontent.com/GithuBarry/chat-plugin-search-engine/main/public/manifest.json",
+  "manifest": "https://raw.githubusercontent.com/foryoung365/lobechat-plugin-google/refs/heads/main/public/manifest.json",
   "meta": {
     "avatar": "🔍",
     "description": "Google search engine via Google Custom Search API (100🆓/day)",
