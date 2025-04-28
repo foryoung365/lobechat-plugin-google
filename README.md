@@ -1,41 +1,41 @@
-# LobeChat Google Custom Search 插件
+# LobeChat Google Custom Search Plugin
 
-使用 [Google Custom Search API](https://developers.google.com/custom-search) 的LobeChat搜索插件。
+A LobeChat search plugin that uses the [Google Custom Search API](https://developers.google.com/custom-search).
 
-## 设置步骤
+## Setup Steps
 
-1. 创建 Google Custom Search Engine
-   - 访问 [Google Programmable Search Engine](https://programmablesearch.google.com/create)
-   - 创建一个自定义搜索引擎
-   - 获取您的搜索引擎ID (cx参数)
+1. Create a Google Custom Search Engine
+   - Visit [Google Programmable Search Engine](https://programmablesearch.google.com/create)
+   - Create a custom search engine
+   - Get your search engine ID (cx parameter)
 
-2. 获取 Google API 密钥
-   - 访问 [Google Cloud Console](https://console.cloud.google.com/)
-   - 创建一个项目
-   - 启用 "Custom Search API"
-   - 创建API密钥 (key参数)
+2. Get Google API Key
+   - Visit [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a project
+   - Enable "Custom Search API"
+   - Create an API key (key parameter)
 
-3. 在LobeChat中配置插件
-   - 将此插件添加到LobeChat
-   - 在配置页面中提供您的API密钥和搜索引擎ID
-   - 这些凭据会作为安全参数自动添加到每个请求中
+3. Configure the Plugin in LobeChat
+   - Add this plugin to LobeChat
+   - Provide your API key and search engine ID in the configuration page
+   - These credentials will be automatically added to each request as secure parameters
 
-## 认证方式
+## Authentication Method
 
-此插件使用以下两个安全参数:
-- `key`: 您的Google API密钥
-- `cx`: 您的自定义搜索引擎ID
+This plugin uses the following two secure parameters:
+- `key`: Your Google API key
+- `cx`: Your custom search engine ID
 
-这两个参数会作为查询参数添加到API请求中。
+These two parameters are added as query parameters to the API request.
 
-## 限制
+## Limitations
 
-- Google Custom Search API 免费版每天限制100次查询
-- 付费版可获得更多配额
+- Google Custom Search API free version is limited to 100 queries per day
+- Paid version provides more quota
 
-## 隐私
+## Privacy
 
-- 您的搜索查询将发送到Google
-- 此插件不会收集或存储您的个人数据
+- Your search queries will be sent to Google
+- This plugin does not collect or store your personal data
 
-`(与上述任何实体无关联)`
+`(Not affiliated with any of the above entities)` 
