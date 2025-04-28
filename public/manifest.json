@@ -5,11 +5,12 @@
     "is_user_authenticated": false
   },
   "auth": {
-    "type": "none"
+    "type": "user_http",
+    "authorization_type": "custom"
   },
   "contact_email": "1758359+foryoung365@users.noreply.github.com",
   "description_for_human": "Google custom search engine API (100🆓/day)",
-  "description_for_model": "Plugin for performing web searches using the Google custom search engine API.",
+  "description_for_model": "Plugin for performing web searches using the Google custom search engine API. Requires Google API key and custom search engine ID.",
   "legal_info_url": "https://developers.google.com/custom-search/v1/introduction",
   "logo_url": "https://www.google.com/favicon.ico",
   "name_for_human": "Search Google via Google Custom Search",
